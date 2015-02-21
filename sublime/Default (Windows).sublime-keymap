@@ -1,0 +1,5 @@
+[
+	{ "keys": ["ctrl+."], "command": "auto_complete" },
+	{ "keys": ["ctrl+-"], "command": "soft_undo" },
+	{ "keys": ["ctrl+shift+-"], "command": "soft_redo" },
+]
