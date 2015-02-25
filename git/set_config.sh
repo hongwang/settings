@@ -56,6 +56,9 @@ git config --global color.diff.new 'bold cyan'
 git config --global color.diff.commit 'blue reverse'
 git config --global color.diff.func 'green bold'
 
+git config --global color.decorate.branch 'bold blue ul'
+git config --global color.decorate.remoteBranch 'bold blue ul'
+git config --global color.decorate.HEAD 'red white '
 
 
 
@@ -64,6 +67,9 @@ git config --global format.pretty "%Cred%h%Creset %C(bold cyan)%an%Creset - %s %
 # https://www.kernel.org/pub/software/scm/git/docs/git-log.html#_pretty_formats
 
 # [log]
+git config --global log.date 'iso'
+git config --global log.decorate 'short'
+git config --global log.abbrevCommit true
 
 
 # [advice]
