@@ -1,0 +1,120 @@
+[user]
+	name = HongWang
+	email = xunhongwang@outlook.com
+[core]
+	autocrlf = true	# for windows only, to reenforce cross platform compatible line ending character.
+	ignorecase = true
+	filemode = false
+	quotepath = false
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = true
+	# colors and presentation options:
+	# - normal, black, red, green, yellow, blue, magenta, cyan, or white
+	# - bold, dim, ul, blink, and reverse
+[color "branch"]
+	#current, local, remote (a remote-tracking branch in refs/remotes/),
+	#upstream (upstream tracking branch), plain (other refs).
+	current = red reverse
+	local = bold yellow
+	remote = green
+	upstream = bold cyan
+	plain = bold white
+[color "status"]
+	#header, added or updated (but not committed), changed (but not added in the
+	#index), untracked, branch, or nobranch
+	added = bold cyan
+	changed = red
+	untracked = bold yellow
+	branch = red reverse
+	#plain = bold cyan
+[color "diff"]
+	#plain (context text), meta (metainformation), frag (hunk header), 
+	#func (function in hunk header), old (removed lines), new (added lines), 
+	#commit (commit headers), or whitespace (highlighting whitespace errors).
+	meta = yellow bold
+	frag = magenta bold
+	plain = white bold
+	old = red bold
+	new = bold cyan
+	commit = blue reverse
+	func = green bold
+[color "decorate"]
+	branch = bold blue ul
+	remoteBranch = bold blue ul
+	HEAD = red white 
+	#branch, remoteBranch, tag, stash or HEAD for local branches, 
+	#remote-tracking branches, tags, stash and HEAD, respectively.
+#[color "interactive"]
+	#prompt, header, help or error
+[format]  
+	pretty = %Cred%h%Creset %C(bold cyan)%an%Creset - %s %Cgreen(%ad)%Creset # default log --pretty format
+[log]
+	date = iso # log use ISO format for date  
+	decorate = auto # decorate log with branch name  
+	abbrevCommit = true # show short SHA1 hash
+[diff]
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = C:/Program\\ Files/SourceGear/Common/DiffMerge/sgdm.exe \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = diffmerge
+	stat = true
+[mergetool "diffmerge"]
+	trustExitCode = true
+	cmd = C:/Program\\ Files/SourceGear/Common/DiffMerge/sgdm.exe /merge /result=\"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[credential]
+	helper = wincred
+[push]
+	default = upstream
+
+[alias]
+	a = add
+	br = branch
+	ci = commit
+	co = checkout
+	cp = cherry-pick
+	rl = reflog
+
+
+
+#	add = add -v
+#	ca = commit --amend  
+#	staged = diff --cached
+#	diff-all = diff HEAD  
+#	diff-stat = diff -b --stat  
+#	st = status --short  
+#	chpc = cherry-pick --continue
+#	chpq = cherry-pick --quit
+#	chpa = cherry-pick --abort
+
+#	rb = rebase  
+#	rbc = rebase --continue  
+#	rbs = rebase --skip
+
+#	rs = remote show  
+#	rt = remote  
+#	ru = remote update  
+#	rp = remote prune  
+#	sm = submodule    
+    
+  
+#	unstage = reset HEAD   
+
+#	log-graph = log --all --graph --decorate  
+#	log-refs = log --all --graph --decorate --simplify-by-decoration --no-merges  
+#	log-timeline = log --oneline --format='%h %an %ar - %s'  
+#	log-local = log --oneline origin..HEAD  
+#	log-fetched = log --oneline HEAD..origin/master
+
+# search for a pattern in branch names, file names, or file contents
+# find = "!f() { ((git branch -a ; git ls-files) | grep $1); git grep $1 }; f"
+	find = "!f() { (git branch -a ; git ls-files) | grep $1; GIT_PAGER=cat git grep $1; }; f"
+
+[branch]
+	autosetupmerge = true
+[advice]
+	statusHints = false
