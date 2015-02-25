@@ -60,6 +60,10 @@ git config --global color.decorate.branch 'bold blue ul'
 git config --global color.decorate.remoteBranch 'bold blue ul'
 git config --global color.decorate.HEAD 'red white '
 
+git config --global color.grep.context 'white'
+git config --global color.grep.filename 'bold cyan'
+git config --global color.grep.linenumber 'bold green'
+git config --global color.grep.match 'red'
 
 
 # [format]
@@ -78,6 +82,9 @@ git config --global advice.statusHints false	# Disable “how to stage/unstage/ad
 # [branch]
 git config --global branch.autosetupmerge true	# When branching off a remote branch, automatically let the local branch track the remote branch
 
+# [grep]
+git config --global grep.lineNumber true
+
 # [push]
 git config --global push.default upstream	#push到对应的分支, Git 2.0 默认值为simple，貌似和upstream一样
 
@@ -95,10 +102,8 @@ git config --global merge.tool diffmerge
 git config --global mergetool.diffmerge.cmd 'diffmerge --merge --result="$MERGED" "$LOCAL" "$BASE" "$REMOTE"'
 git config --global mergetool.diffmerge.trustExitCode true
 
-
 #alias name
 git config --system alias.st status
 git config --system alias.ci commit
 git config --system alias.co checkout
 git config --system alias.br branck
-

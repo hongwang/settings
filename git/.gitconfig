@@ -30,7 +30,7 @@
 	changed = red
 	untracked = bold yellow
 	branch = red reverse
-	#plain = bold cyan
+	plain = bold cyan
 [color "diff"]
 	#plain (context text), meta (metainformation), frag (hunk header), 
 	#func (function in hunk header), old (removed lines), new (added lines), 
@@ -48,16 +48,25 @@
 	HEAD = red white 
 	#branch, remoteBranch, tag, stash or HEAD for local branches, 
 	#remote-tracking branches, tags, stash and HEAD, respectively.
+[color "grep"]
+	context = white
+	filename = bold cyan
+	linenumber = bold green
+	match = red
+	#function = bold yellow
+	#selected = white
+	#separator = black
 #[color "interactive"]
 	#prompt, header, help or error
 [format]  
 	pretty = %Cred%h%Creset %C(bold cyan)%an%Creset - %s %Cgreen(%ad)%Creset # default log --pretty format
 [log]
 	date = iso # log use ISO format for date  
-	decorate = auto # decorate log with branch name  
+	decorate = short # decorate log with branch name  
 	abbrevCommit = true # show short SHA1 hash
 [diff]
 	tool = diffmerge
+	mnemonicprefix = true
 [difftool "diffmerge"]
 	cmd = C:/Program\\ Files/SourceGear/Common/DiffMerge/sgdm.exe \"$LOCAL\" \"$REMOTE\"
 [merge]
@@ -70,7 +79,12 @@
 	helper = wincred
 [push]
 	default = upstream
-
+[branch]
+	autosetupmerge = true
+[advice]
+	statusHints = false
+[grep]
+	lineNumber = true
 [alias]
 	a = add
 	br = branch
@@ -114,7 +128,4 @@
 # find = "!f() { ((git branch -a ; git ls-files) | grep $1); git grep $1 }; f"
 	find = "!f() { (git branch -a ; git ls-files) | grep $1; GIT_PAGER=cat git grep $1; }; f"
 
-[branch]
-	autosetupmerge = true
-[advice]
-	statusHints = false
+
