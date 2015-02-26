@@ -123,9 +123,3 @@
 #	log-timeline = log --oneline --format='%h %an %ar - %s'  
 #	log-local = log --oneline origin..HEAD  
 #	log-fetched = log --oneline HEAD..origin/master
-
-# search for a pattern in branch names, file names, or file contents
-# find = "!f() { ((git branch -a ; git ls-files) | grep $1); git grep $1 }; f"
-	find = "!f() { (git branch -a ; git ls-files) | grep $1; GIT_PAGER=cat git grep $1; }; f"
-
-

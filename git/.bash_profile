@@ -67,6 +67,7 @@ alias gdtc='git difftool -y --cached'
 
 alias gb='git branch'
 alias gba='git branch -a'
+alias gbc='git branch --contains'
 
 alias gp='git push'
 
@@ -83,7 +84,6 @@ alias glyst="log --author=Hong --all --decorate --since=yesterday"
 alias go='git checkout'
 alias gob='git checkout -b'
 
-
 alias gf='git fetch'
 alias gpu='git pull'
 alias gcl='git clone'
@@ -97,14 +97,26 @@ alias gsv="git add -A && git commit -m"	# save
 alias gsvp="git add -A && git commit -m 'SAVEPOINT'" # save with message 'savepoint'
 alias gwip="git add -u && git commit -m 'WIP'"	# work in process
 
-alias gunmd='git status | grep modified | awk '{print $2}' | xargs git checkout' # unmodified
+alias gunmd="git status | grep modified | awk '{print $2}' | xargs git checkout" # unmodified
 alias gundo="git reset HEAD~1 --mixed" 
 alias greset="git reset --hard HEAD"
 # alias unstage='git reset HEAD'
 
+# show a list of tags sorted by when they were tagged
+alias gtags='git for-each-ref --sort=taggerdate refs/tags --format=\"%(refname:short)\"'
+# show a list of every branch and show their latests commit, sorted by last commit
+#alias gbrs="sh -c 'for C in $(git for-each-ref --sort=committerdate refs/heads --format=\"%(refname:short)\") ; do git show  -s --pretty=format:\"%Cgreen%ci %Cblue%cr%Creset  $C\" \"$C\" -- ; git show --stat -s $C ; echo; done'"
+#alias gbrsr="sh -c 'for C in $(git for-each-ref --sort=committerdate refs/remotes/origin --format="%(refname:short)") ; do git show  -s --pretty=format:"%C(bold cyan)%ci%Creset %C (green)%cr%Creset  %C(bold yellow)$C%Creset" "$C" -- ; git show --stat -s $C ; echo; done'"
+
 alias gcfge='git config --global -e'
 alias galias="git config --list | grep 'alias\.' | sed 's/alias\.\([^=]*\)=\(.*\)/\1\ = \2/' | sort"
 alias gurl="git config --get remote.origin.url"
+
+# from https://gist.github.com/492227
+alias glost="git fsck | awk '/dangling commit/ {print $3}' | git show --format='SHA1: %C(yellow)%h%Creset %f' --stdin | awk '/SHA1/ {sub(\"SHA1: \", \"\"); print}'"
+# search for a pattern in branch names, file names, or file contents
+alias gfind='f() { (git branch -a ; git ls-files) | grep $1; GIT_PAGER=cat git grep $1; }; f'
+alias groot='cd `git rev-parse --show-toplevel`'
 
 # One char shortcuts
 alias w='which'
