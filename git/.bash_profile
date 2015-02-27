@@ -97,6 +97,8 @@ alias gsv="git add -A && git commit -m"	# save
 alias gsvp="git add -A && git commit -m 'SAVEPOINT'" # save with message 'savepoint'
 alias gwip="git add -u && git commit -m 'WIP'"	# work in process
 
+# remove a file from index
+alias gunadd="git reset HEAD"
 alias gunmd="git status | grep modified | awk '{print $2}' | xargs git checkout" # unmodified
 alias gundo="git reset HEAD~1 --mixed" 
 alias greset="git reset --hard HEAD"
@@ -104,9 +106,15 @@ alias greset="git reset --hard HEAD"
 
 # show a list of tags sorted by when they were tagged
 alias gtags='git for-each-ref --sort=taggerdate refs/tags --format=\"%(refname:short)\"'
+
+# branches that are merged locally already, note this includes master itself
+alias gbnew="git branch --merged develop"
+# delete branch that have merged to develop
+alias gpurge = "git branch -d $(git branch --merged develop | grep -v -e '*' -e 'develop')"
 # show a list of every branch and show their latests commit, sorted by last commit
-#alias gbrs="sh -c 'for C in $(git for-each-ref --sort=committerdate refs/heads --format=\"%(refname:short)\") ; do git show  -s --pretty=format:\"%Cgreen%ci %Cblue%cr%Creset  $C\" \"$C\" -- ; git show --stat -s $C ; echo; done'"
-#alias gbrsr="sh -c 'for C in $(git for-each-ref --sort=committerdate refs/remotes/origin --format="%(refname:short)") ; do git show  -s --pretty=format:"%C(bold cyan)%ci%Creset %C (green)%cr%Creset  %C(bold yellow)$C%Creset" "$C" -- ; git show --stat -s $C ; echo; done'"
+alias gbrs='for C in $(git for-each-ref --sort=committerdate refs/heads --format="%(refname:short)") ; do git show  -s --pretty=format:"%Cgreen%ci %Cblue%cr%Creset  $C" "$C" -- ; git show --stat -s $C ; echo; done'
+alias gbrsr='for C in $(git for-each-ref --sort=committerdate refs/remotes/origin --format="%(refname:short)") ; do git show  -s --pretty=format:"%Cgreen%ci %Cblue%cr%Creset  $C" "$C" -- ; git show --stat -s $C ; echo; done'
+alias gbrfc='for C in $(git for-each-ref --sort=committerdate refs/heads --format="%(refname:short)"| tac) ; do git show -s --pretty=format:"%Cgreen%ci %Cblue%cr%Creset  $C" "$C" -- ; git --no-pager log  -p -1 $C -- $0; echo; done'
 
 alias gcfge='git config --global -e'
 alias galias="git config --list | grep 'alias\.' | sed 's/alias\.\([^=]*\)=\(.*\)/\1\ = \2/' | sort"
@@ -114,6 +122,9 @@ alias gurl="git config --get remote.origin.url"
 
 # from https://gist.github.com/492227
 alias glost="git fsck | awk '/dangling commit/ {print $3}' | git show --format='SHA1: %C(yellow)%h%Creset %f' --stdin | awk '/SHA1/ {sub(\"SHA1: \", \"\"); print}'"
+alias gignored="git ls-files --exclude-standard --ignored --others"
+# based on "buggyfiles" above and https://github.com/cypher/dotfiles/blob/master/bin/git-churn
+alias gchurn="git log -M -C --name-only --format="format:%n" | grep . | sort | uniq -c | sort -n"
 # search for a pattern in branch names, file names, or file contents
 alias gfind='f() { (git branch -a ; git ls-files) | grep $1; GIT_PAGER=cat git grep $1; }; f'
 alias groot='cd `git rev-parse --show-toplevel`'
