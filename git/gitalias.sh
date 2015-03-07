@@ -118,3 +118,5 @@ alias gfind='f() { (git branch -a ; git ls-files) | grep $1; GIT_PAGER=cat git g
 alias groot='cd `git rev-parse --show-toplevel`'
 alias gfsize='git ls-tree -r -t -l --full-name HEAD | sort -rn -k 4 | less'
 
+
+#alias rmorig='find -name *.orig | xargs rm -f'

@@ -1,3 +1,9 @@
+
+alias psbuild='powershell ./build-me.ps1 -RunDebugBuild'
+alias cmdbuild='cmd /c build.cmd debug'
+alias buildjs='git pull --prune && git submodule update --init --recursive && npm update && bower update && grunt && grunt latest'
+
+
 PATH='/c/Windows/Microsoft.NET/Framework64/v4.0.30319':$PATH
 PATH='/c/Program Files (x86)/Microsoft SDKs/Windows/v7.0A/Bin':$PATH
 PATH='/c/Program Files/nodejs':$PATH
