@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2015-02-22 00:15:44" build="150218">
+		<key name=".Vanilla" modified="2015-03-07 20:46:57" build="150305">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -144,12 +144,12 @@
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
-			<value name="WindowMode" type="dword" data="0000051f"/>
+			<value name="WindowMode" type="dword" data="00000520"/>
 			<value name="ConWnd Width" type="dword" data="000000a0"/>
 			<value name="ConWnd Height" type="dword" data="00000029"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="ConWnd X" type="dword" data="fffffff8"/>
-			<value name="ConWnd Y" type="dword" data="fffffff8"/>
+			<value name="ConWnd Y" type="dword" data="00000000"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -304,7 +304,7 @@
 			<value name="TabFontHeight" type="dword" data="0000000e"/>
 			<value name="SaveAllEditors" type="string" data=""/>
 			<value name="ToolbarAddSpace" type="dword" data="00000000"/>
-			<value name="TabConsole" type="string" data="&lt;%c&gt; %s"/>
+			<value name="TabConsole" type="string" data="%c %n %d"/>
 			<value name="TabModifiedSuffix" type="string" data="[*]"/>
 			<value name="TabSkipWords" type="string" data="Administrator:|Администратор:"/>
 			<value name="TabPanels" type="string" data="&lt;%c&gt; %s"/>
@@ -312,8 +312,8 @@
 			<value name="TabEditorModified" type="string" data="&lt;%c.%i&gt;[%s] *"/>
 			<value name="TabViewer" type="string" data="&lt;%c.%i&gt;[%s]"/>
 			<value name="TabLenMax" type="dword" data="00000014"/>
-			<value name="AdminTitleSuffix" type="string" data=" (Admin)"/>
-			<value name="AdminShowShield" type="hex" data="01"/>
+			<value name="AdminTitleSuffix" type="string" data=""/>
+			<value name="AdminShowShield" type="hex" data="00"/>
 			<value name="HideInactiveConsoleTabs" type="hex" data="00"/>
 			<value name="ShowFarWindows" type="hex" data="01"/>
 			<value name="TryToCenter" type="hex" data="01"/>
@@ -335,7 +335,7 @@
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data="help"/>
+			<value name="FindText" type="string" data="structure"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="01"/>
@@ -554,9 +554,9 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-			<key name="Tasks" modified="2015-02-22 00:15:44" build="150218">
+			<key name="Tasks" modified="2015-03-07 20:46:57" build="150305">
 				<value name="Count" type="dword" data="00000008"/>
-				<key name="Task1" modified="2015-02-22 00:15:44" build="150218">
+				<key name="Task1" modified="2015-03-07 20:46:57" build="150305">
 					<value name="Name" type="string" data="{Shells::cmd}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -565,7 +565,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task2" modified="2015-02-22 00:15:44" build="150218">
+				<key name="Task2" modified="2015-03-07 20:46:57" build="150305">
 					<value name="Name" type="string" data="{Shells::cmd (Admin)}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -574,7 +574,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task3" modified="2015-02-22 00:15:44" build="150218">
+				<key name="Task3" modified="2015-03-07 20:46:57" build="150305">
 					<value name="Name" type="string" data="{Shells::PowerShell}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -583,7 +583,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task4" modified="2015-02-22 00:15:44" build="150218">
+				<key name="Task4" modified="2015-03-07 20:46:57" build="150305">
 					<value name="Name" type="string" data="{Shells::PowerShell (Admin)}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -592,7 +592,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task5" modified="2015-02-22 00:15:44" build="150218">
+				<key name="Task5" modified="2015-03-07 20:46:57" build="150305">
 					<value name="Name" type="string" data="{Bash::Git bash}"/>
 					<value name="Flags" type="dword" data="00000001"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -601,7 +601,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task6" modified="2015-02-22 00:15:44" build="150218">
+				<key name="Task6" modified="2015-03-07 20:46:57" build="150305">
 					<value name="Name" type="string" data="{Putty}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -610,7 +610,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task7" modified="2015-02-22 00:15:44" build="150218">
+				<key name="Task7" modified="2015-03-07 20:46:57" build="150305">
 					<value name="Name" type="string" data="{Scripts::Chocolatey (Admin)}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -619,7 +619,7 @@
 					<value name="Active" type="dword" data="00000000"/>
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
-				<key name="Task8" modified="2015-02-22 00:15:44" build="150218">
+				<key name="Task8" modified="2015-03-07 20:46:57" build="150305">
 					<value name="Name" type="string" data="{SDK::VS 11.0 x86 tools prompt}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -647,12 +647,15 @@
 					<value name="Count" type="dword" data="00000001"/>
 				</key>
 			</key>
-			<key name="Apps" modified="2015-02-22 00:15:44" build="150218">
+			<key name="Apps" modified="2015-03-07 20:46:57" build="150305">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-			<key name="Colors" modified="2015-02-22 00:15:44" build="150218">
+			<key name="Colors" modified="2015-03-07 20:46:57" build="150305">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
+			<value name="KillProcessKey" type="dword" data="00000000"/>
+			<value name="KillAllButShellKey" type="dword" data="00105b2e"/>
+			<value name="AffinityPriorityKey" type="dword" data="00005d41"/>
 		</key>
 	</key>
 </key>
