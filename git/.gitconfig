@@ -59,6 +59,7 @@
 #[color "interactive"]
 	#prompt, header, help or error
 [format]  
+	#pretty = %Cred%h%Creset %C(bold cyan)%an%Creset - %C(auto,bold yellow)%d%C(auto,reset) %s %Cgreen(%ad)%Creset # default log --pretty format
 	pretty = %Cred%h%Creset %C(bold cyan)%an%Creset - %s %Cgreen(%ad)%Creset # default log --pretty format
 [log]
 	date = iso # log use ISO format for date  
