@@ -43,8 +43,8 @@ fi
 #   INFOPATH="${HOME}/info:${INFOPATH}"
 # fi
 
-if [ -f "${HOME}/.gitalias" ] ; then
-  source "${HOME}/.gitalias"
+if [ -f "${HOME}/gitalias.sh" ] ; then
+  source "${HOME}/gitalias.sh"
 fi
 
 # One char shortcuts
