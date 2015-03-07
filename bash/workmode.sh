@@ -2,7 +2,7 @@ PATH='/c/Windows/Microsoft.NET/Framework64/v4.0.30319':$PATH
 PATH='/c/Program Files (x86)/Microsoft SDKs/Windows/v7.0A/Bin':$PATH
 PATH='/c/Program Files/nodejs':$PATH
 PAHT='/c/Users/hong.wangxh/AppData/Roaming/npm':$PATH
-PATH='/d/Program Files/Sublime Text 3':$PATH
+PATH='/c/Program Files/Sublime Text 3':$PATH
 #PATH=/c/Windows/System32/inetsrv:$PATH 	#IIS
 export PATH
 
