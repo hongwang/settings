@@ -100,7 +100,7 @@ alias gbrfc='for C in $(git for-each-ref --sort=committerdate refs/heads --forma
 
 alias gcfge='git config --global -e'
 alias galiasc="git config --list | grep 'alias\.' | sed 's/alias\.\([^=]*\)=\(.*\)/\1\ = \2/' | sort"
-alias galias="cat ~/.gitalias | grep 'alias' | sed 's/alias \([^=]*\)=\(.*\)/\1\ = \2/'"
+alias galias="cat ~/gitalias.sh | grep 'alias' | sed 's/alias \([^=]*\)=\(.*\)/\1\ = \2/'"
 alias gurl="git config --get remote.origin.url"
 
 # from https://gist.github.com/492227

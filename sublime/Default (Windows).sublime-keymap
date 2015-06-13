@@ -2,4 +2,5 @@
 	{ "keys": ["ctrl+."], "command": "auto_complete" },
 	{ "keys": ["ctrl+-"], "command": "soft_undo" },
 	{ "keys": ["ctrl+shift+-"], "command": "soft_redo" },
+	{ "keys": ["alt+`"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
 ]
