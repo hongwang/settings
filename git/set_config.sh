@@ -102,6 +102,9 @@ git config --global merge.tool diffmerge
 git config --global mergetool.diffmerge.cmd 'diffmerge --merge --result="$MERGED" "$LOCAL" "$BASE" "$REMOTE"'
 git config --global mergetool.diffmerge.trustExitCode true
 
+# Maximum size in bytes of the buffer used by smart HTTP transports when POSTing data to the remote system
+git config --global http.postBuffer 524288000
+
 #alias name
 git config --system alias.st status
 git config --system alias.ci commit
