@@ -1,9 +1,19 @@
 {
 	"caret_style": "phase",
+	"theme": "Material-Theme.sublime-theme",
+
+	// Start material config
+	"material_theme_small_tab": true,
+	"material_theme_small_statusbar": true,
+	// End material config
+
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
 	"create_window_at_startup": false,
 	"draw_minimap_border": false,
 	"draw_white_space": "all",
+	"overlay_scroll_bars": "enabled",
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -20,13 +30,12 @@
 		"Vintage",
 		"Markdown"
 	],
-	"line_padding_bottom": 2,
-	"line_padding_top": 2,
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
 	"open_files_in_new_window": false,
 	"scroll_past_end": false,
 	"show_encoding": true,
 	"tab_size": 4,
-	"theme": "Spacegray.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"word_wrap": false
 }
