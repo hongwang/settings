@@ -5,6 +5,7 @@
 	// Start material config
 	"material_theme_small_tab": true,
 	"material_theme_small_statusbar": true,
+	"material_theme_disable_folder_animation": true,
 	// End material config
 
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
