@@ -9,3 +9,6 @@ export lnet=$repos'/dotNet'
 export ljs=$repos'/javascript'
 export lasp=$repos'/aspnet'
 
+# Mysql
+alias mysql='mycli -h localhost -u root'
+alias mysqls='mysql.server'

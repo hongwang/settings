@@ -1,4 +1,6 @@
-syntax on
+syntax on 					" 语法支持
+
+
 
 set autoindent
 
