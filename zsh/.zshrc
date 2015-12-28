@@ -89,7 +89,6 @@ if [ -f "${HOME}/gitalias.sh" ] ; then
 fi
 
 
-
 # One char shortcuts
 alias w='which'
 alias p='python'
@@ -106,9 +105,9 @@ alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 # Navigation
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
+#alias ..='cd ..'
+#alias ...='cd ../..'
+#alias ....='cd ../../..'
 
 #copy the working directory into the clipboard
 #alias cwd='pwd | pbcopy' # for linux
