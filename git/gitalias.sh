@@ -120,7 +120,7 @@ alias gbrsr='for C in $(git for-each-ref --sort=committerdate refs/remotes/origi
 alias gbrfc='for C in $(git for-each-ref --sort=committerdate refs/heads --format="%(refname:short)"| tac) ; do git show -s --pretty=format:"%Cgreen%ci %Cblue%cr%Creset  $C" "$C" -- ; git --no-pager log  -p -1 $C -- $0; echo; done'
 
 alias galiasc="git config --list | grep 'alias\.' | sed 's/alias\.\([^=]*\)=\(.*\)/\1\ = \2/' | sort"
-alias galias="cat ~/.gitalias | grep 'alias' | sed 's/alias \([^=]*\)=\(.*\)/\1\ = \2/'"
+alias galias="cat ~/gitalias.sh | grep 'alias' | sed 's/alias \([^=]*\)=\(.*\)/\1\ = \2/'"
 alias gurl="git config --get remote.origin.url"
 
 # from https://gist.github.com/492227
