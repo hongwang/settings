@@ -10,11 +10,11 @@
 
 	"color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
 	"create_window_at_startup": false,
-	"draw_minimap_border": false,
+	"draw_minimap_border": false,	// 右侧代码预览时给所在区域加上边框
 	"draw_white_space": "all",
 	"overlay_scroll_bars": "enabled",
 	"always_show_minimap_viewport": true,
-	"bold_folder_labels": true,
+	"bold_folder_labels": true,	// 侧边栏文件夹显示加粗
 	"folder_exclude_patterns":
 	[
 		".svn",
@@ -24,8 +24,8 @@
 	],
 	"font_face": "Consolas",
 	"font_size": 15.0,
-	"highlight_line": true,
-	"highlight_modified_tabs": true,
+	"highlight_line": true,	// 当前行高亮
+	"highlight_modified_tabs": true,	// 高亮未保存文件
 	"ignored_packages":
 	[
 		"Vintage",
@@ -37,6 +37,12 @@
 	"scroll_past_end": false,
 	"show_encoding": true,
 	"tab_size": 4,
-	"translate_tabs_to_spaces": false,
-	"word_wrap": false
+	"translate_tabs_to_spaces": false,	// 把代码 tab 对齐转换为空格对齐，tab_size 配合设置空格数
+	"word_wrap": false,	// 自动换行
+	"trim_trailing_white_space_on_save": true,	// 自动移除行尾多余空格
+	"ensure_newline_at_eof_on_save": true,	// 文件末尾自动保留一个空行
+	"save_on_focus_lost": true,	// 窗口失焦立即保存文件
+	"default_line_ending": "unix",	// 使用 unix 风格的换行符
+	"auto_find_in_selection": true,	// 开启选中范围内搜索, 而不是整个文档
+	"fade_fold_buttons": false	// 默认显示行号右侧的代码段闭合展开三角号
 }
