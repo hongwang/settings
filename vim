@@ -36,8 +36,14 @@ let g:Powerline_symbols = 'fancy'
 "}
 
 "pathogen {                     " 管理插件的插件
-"call pathogen#infect()
+call pathogen#infect()
 "}
+ 
+"NERDTree {                       
+map <C-k><C-b> :NERDTreeToggle<CR>
+"}
+
+
 "}}
 
 
