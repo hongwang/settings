@@ -7,14 +7,14 @@ alias gaa='git add -A'
 
 alias gb='git branch'
 alias gba='git branch -a'
-alias gbc='git branch --contains' 
+alias gbc='git branch --contains'
 alias gbnm='git branch --no-merged'
 alias gbr='git branch --remote'
-alias gbv='git branch -vv'	
+alias gbv='git branch -vv'
 
 alias gcmsg='git commit -m'
 alias gcam='git commit --amend' # overwrite # edit
-alias gcama="git commit --amend -a" 
+alias gcama="git commit --amend -a"
 
 alias gco='git checkout'
 alias gcb='git checkout -b'
@@ -25,13 +25,13 @@ alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 
 alias gcf='git config --list'
-alias gcfge='git config --global -e' 
+alias gcfge='git config --global -e'
 
 
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gdf='git diff --name-status' 
-alias gdcf='git diff --cached --name-status' 
+alias gdf='git diff --name-status'
+alias gdcf='git diff --cached --name-status'
 alias gdw='git diff --word-diff'
 
 alias gdt='git difftool -y'
@@ -61,17 +61,17 @@ alias gpr='git push --set-upstream origin $(gbn)'
 alias gpt='git push --tags'
 
 # Log
-alias gl='git log'	
-alias gl3='git log -3'	
+alias gl='git log'
+alias gl3='git log -3'
 alias gll='git log -8 --no-merges' 	# last
 alias glls="git log -8 --no-merges --numstat"   # last stat
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative" # overwrite
-alias glga="glg --all" 
-alias glgf="glg -p --name-status" 
+alias glga="glg --all"
+alias glgf="glg -p --name-status"
 alias gls="git log -S" 	# search string in the diff
-alias glyst="git log --author=Hong --all --decorate --since=yesterday" 
+alias glyst="git log --author=Hong --all --decorate --since=yesterday"
 alias glf='git log -u'
-alias glfirstdate='git log --date-order --date=iso --pretty="format:%ad" --reverse | head -1' 
+alias glfirstdate='git log --date-order --date=iso --pretty="format:%ad" --reverse | head -1'
 # Log
 
 
@@ -86,7 +86,7 @@ alias gwip="git add -u && git commit -m 'WIP'"	# work in process
 # remove a file from index
 alias gunadd="git reset HEAD"
 alias gunmd="git status | grep modified | awk '{print $2}' | xargs git checkout" # unmodified
-alias gundo="git reset HEAD~1 --mixed" 
+alias gundo="git reset HEAD~1 --mixed"
 alias greset="git reset --hard HEAD"
 alias gpristine='git reset --hard && git clean -dfx'
 
@@ -140,3 +140,4 @@ alias gfsize='git ls-tree -r -t -l --full-name HEAD | sort -rn -k 4 | less'
 
 
 #alias rmorig='find -name *.orig | xargs rm -f'
+alias rmorig='gs | grep "\.orig" | xargs rm -f'
