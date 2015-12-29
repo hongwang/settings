@@ -52,7 +52,7 @@ alias gbn='git rev-parse --abbrev-ref HEAD'
 alias gbd='f() { git push origin :refs/heads/$1; git remote prune origin; git branch -D $1; }; f'
 # prune-remotes
 alias gbp='for remote in `git remote`; do git remote prune $remote; done'
-p
+
 alias gpu='git pull'
 alias gpup='git pull --rebase'
 
