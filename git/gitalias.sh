@@ -140,4 +140,5 @@ alias gfsize='git ls-tree -r -t -l --full-name HEAD | sort -rn -k 4 | less'
 
 
 #alias rmorig='find -name *.orig | xargs rm -f'
-alias rmorig='gs | grep "\.orig" | xargs rm -f'
+alias rmorig="git status | grep '\.orig' | xargs rm -f"
+
