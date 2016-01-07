@@ -13,13 +13,13 @@ alias gbr='git branch --remote'
 alias gbv='git branch -vv'
 
 alias gcmsg='git commit -m'
-alias gcam='git commit --amend' # overwrite # edit
+alias gcam='git commit --amend'  # edit
 alias gcama="git commit --amend -a"
 
 alias gco='git checkout'
 alias gcb='git checkout -b'
 
-alias gcl='git clone' # overwrite
+alias gcl='git clone' 
 alias gclean='git clean -fd'
 alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
@@ -65,7 +65,7 @@ alias gl='git log'
 alias gl3='git log -3'
 alias gll='git log -8 --no-merges' 	# last
 alias glls="git log -8 --no-merges --numstat"   # last stat
-alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative" # overwrite
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(bold yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative" 
 alias glga="glg --all"
 alias glgf="glg -p --name-status"
 alias gls="git log -S" 	# search string in the diff
