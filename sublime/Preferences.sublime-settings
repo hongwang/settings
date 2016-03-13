@@ -37,6 +37,7 @@
 	"scroll_past_end": false,
 	"show_encoding": true,
 	"tab_size": 4,
+    "spell_check": true,
 	"translate_tabs_to_spaces": false,	// 把代码 tab 对齐转换为空格对齐，tab_size 配合设置空格数
 	"word_wrap": false,	// 自动换行
 	"trim_trailing_white_space_on_save": true,	// 自动移除行尾多余空格
