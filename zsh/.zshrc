@@ -88,7 +88,6 @@ if [ -f "${HOME}/gitalias.sh" ] ; then
   source "${HOME}/gitalias.sh"
 fi
 
-
 # One char shortcuts
 alias w='which'
 alias p='python'
@@ -111,6 +110,10 @@ alias cwd='pwd | clip' # for window
 
 if [ -f "${HOME}/homemode.sh" ] ; then
   source "${HOME}/homemode.sh"
+fi
+
+if [ -f "${HOME}/homemode_mac.sh" ] ; then
+ source "${HOME}/homemode_mac.sh"
 fi
 
 if [ -f "${HOME}/workmode.sh" ] ; then
