@@ -112,10 +112,6 @@ if [ -f "${HOME}/homemode.sh" ] ; then
   source "${HOME}/homemode.sh"
 fi
 
-if [ -f "${HOME}/homemode_mac.sh" ] ; then
- source "${HOME}/homemode_mac.sh"
-fi
-
 if [ -f "${HOME}/workmode.sh" ] ; then
   source "${HOME}/workmode.sh"
 fi
