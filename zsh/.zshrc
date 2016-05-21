@@ -5,7 +5,8 @@ export ZSH=/Users/Hong/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="pygmalion"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,6 +51,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+#plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
 
 # User configuration
 
@@ -57,6 +59,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+source ~/Codes/hong/settings/zsh/env_settings.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -84,35 +87,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-if [ -f "${HOME}/gitalias.sh" ] ; then
-  source "${HOME}/gitalias.sh"
-fi
-
-# One char shortcuts
-alias w='which'
-alias p='python'
-alias ll='ls -l'
-alias la='ls -a'
-alias clr='clear'
-alias grep='grep --color=auto'
-
-alias -s py=vim
-alias -s js=vim
-alias -s c=vim
-alias -s gz='tar -xzvf'
-alias -s tgz='tar -xzvf'
-alias -s zip='unzip'
-alias -s bz2='tar -xjvf'
-
-#copy the working directory into the clipboard
-#alias cwd='pwd | pbcopy' # for linux
-alias cwd='pwd | clip' # for window
-
-if [ -f "${HOME}/homemode.sh" ] ; then
-  source "${HOME}/homemode.sh"
-fi
-
-if [ -f "${HOME}/workmode.sh" ] ; then
-  source "${HOME}/workmode.sh"
-fi
-
+alias zshconfig="vim ~/.zshrc"
+alias envconfig="vim ~/Codes/hong/settings/zsh/env_settings.sh"
