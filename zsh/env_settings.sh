@@ -16,13 +16,14 @@ export USER_NAME="Hong"
 # One char shortcuts
 alias w='which'
 alias p='python'
-alias ll='ls -al'
 alias clr='clear'
 alias grep='grep --color=auto'
 
 alias -s py=vim
 alias -s js=vim
 alias -s c=vim
+
+# also can try 'x' alias from extract plugin
 alias -s gz='tar -xzvf'
 alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
