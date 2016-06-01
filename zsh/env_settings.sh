@@ -32,6 +32,7 @@ alias -s bz2='tar -xjvf'
 #copy the working directory into the clipboard
 alias cwd='pwd | clipcopy' # for linux
 alias o2w='open_command $(pwd)'
+alias ccat='colorize'	# depend on colorize plugin
 
 
 if [ -f "${HOME}/gitalias.sh" ] ; then
