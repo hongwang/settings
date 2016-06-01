@@ -30,9 +30,8 @@ alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
 #copy the working directory into the clipboard
-alias cwd='pwd | pbcopy' # for linux
-#alias cwd='pwd | clip' # for window
-
+alias cwd='pwd | clipcopy' # for linux
+alias o2w='open_command $(pwd)'
 
 
 if [ -f "${HOME}/gitalias.sh" ] ; then
