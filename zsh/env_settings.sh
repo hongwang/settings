@@ -35,9 +35,7 @@ alias o2w='open_command $(pwd)'
 alias ccat='colorize'	# depend on colorize plugin
 
 
-if [ -f "${HOME}/gitalias.sh" ] ; then
-  source "${HOME}/gitalias.sh"
-fi
+source ~/Codes/hong/settings/git/gitalias.sh
 
 if [ -f "${HOME}/homemode.sh" ] ; then
   source "${HOME}/homemode.sh"
@@ -46,6 +44,7 @@ fi
 if [ -f "${HOME}/workmode.sh" ] ; then
   source "${HOME}/workmode.sh"
 fi
+
 
 
 # FileSearch
