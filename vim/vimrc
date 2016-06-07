@@ -26,25 +26,7 @@ nnoremap <C-h> gT
 nnoremap <leader>t: tabe<CR>
 "}}
 
-"plugins conf {{                " 插件配置
 
-"powerline {                    " 状态栏配置
-set guifont=PowerlineSymbols\ for\ Powerline
-set nocompatible
-set t_Co=256
-let g:Powerline_symbols = 'fancy'
-"}
-
-"pathogen {                     " 管理插件的插件
-call pathogen#infect()
-"}
- 
-"NERDTree {                       
-map <C-k><C-b> :NERDTreeToggle<CR>
-"}
-
-
-"}}
 
 
 "set autoindent
@@ -52,5 +34,39 @@ map <C-k><C-b> :NERDTreeToggle<CR>
 "set smarttab
 
 
-filetype plugin on
+" filetype plugin on
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+
+" Vundle Setting
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" http://www.erikzaadi.com/2012/03/19/auto-installing-vundle-from-your-vimrc/
+" Setting up Vundle - the vim plugin bundler
+
+let iCanHazVundle=1
+let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(vundle_readme)
+      echo "Installing Vundle.."
+      echo ""
+      silent !mkdir -p ~/.vim/bundle
+      silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+      let iCanHazVundle=0
+endif
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
+
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+"plugins conf {{                " 插件配置
+
+
+"}}
