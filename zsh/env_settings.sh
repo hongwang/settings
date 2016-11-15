@@ -53,3 +53,5 @@ function r() { grep "$1" ${@:2} -R . }
 
 # mkdir and cd
 function mkcd() { mkdir -p "$@" && cd "$_"; }
+
+function vcsv() { zcat "$1" > /tmp/vcsv.csv && tabview /tmp/vcsv.csv }
