@@ -55,3 +55,7 @@ function r() { grep "$1" ${@:2} -R . }
 function mkcd() { mkdir -p "$@" && cd "$_"; }
 
 function vcsv() { zcat "$1" > /tmp/vcsv.csv && tabview /tmp/vcsv.csv }
+
+function ssht() { ssh -NTf -M -L 2222:$1:22 live-mc;ssh root@localhost -p 2222 }
+
+function sshtx() { ssh -T -O "exit" live-mc }
